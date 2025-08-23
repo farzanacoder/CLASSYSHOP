@@ -1,6 +1,4 @@
 import React from "react";
-import PrevArr from "../components/PrevArr";
-import NextArr from "../components/NextArr";
 import Slider from "react-slick";
 import Image from "../components/Image";
 
@@ -13,36 +11,36 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Banner = () => {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 700,
+    cssEase: "ease-in-out",
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <NextArr />,
-    prevArrow: <PrevArr />,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
+    centerPadding: "60px",
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 3 } },
-      { breakpoint: 768, settings: { slidesToShow: 2 } },
-      { breakpoint: 480, settings: { slidesToShow: 1 } },
+      { breakpoint: 1024, settings: { slidesToShow: 1, centerPadding: "50px" } },
+      { breakpoint: 768, settings: { slidesToShow: 1, centerPadding: "30px" } },
+      { breakpoint: 480, settings: { slidesToShow: 1, centerPadding: "20px" } },
     ],
   };
 
-  let banner = [
-    { id: 1, title: "banner 1", img: banner1 },
-    { id: 2, title: "banner 2", img: banner2 },
-    { id: 3, title: "banner 3", img: banner3 },
-    { id: 4, title: "banner 4", img: banner4 },
-  ];
+  const banners = [banner1, banner2, banner3, banner4];
 
   return (
-    <Slider {...settings}>
-      {banner.map((item) => (
-        <div key={item.id} className="bg-amber-100">
-          <Image src={item.img} alt={item.title} />
-        </div>
-      ))}
-    </Slider>
+<div className=" bg-gray-100 py-7 overflow-x-hidden">
+      <Slider {...settings}>
+        {banners.map((item , index) => (
+          <div key={index} className="px-4">
+            <Image src={item} className="rounded-lg" />
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 };
 
