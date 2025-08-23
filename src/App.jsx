@@ -1,11 +1,10 @@
 import React from 'react'
+import Banner from './layouts/Banner'
 
 const App = () => {
   return (
     <div>
-      <h1 class="text-xl font-bold underline">
-    Hello world!
-  </h1>
+      <Banner/>
     </div>
   )
 }
