@@ -32,7 +32,7 @@ const Banner = () => {
   const banners = [banner1, banner2, banner3, banner4];
 
   return (
-<div className=" bg-gray-100 py-7 overflow-x-hidden">
+<div className=" bg-purple-100 py-7 overflow-x-hidden">
       <Slider {...settings}>
         {banners.map((item , index) => (
           <div key={index} className="px-4">
