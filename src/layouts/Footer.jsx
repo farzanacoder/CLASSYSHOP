@@ -13,67 +13,138 @@ const Footer = () => {
     <footer className="bg-gray-50">
       <section className="py-10 bg-amber-50">sdh</section>
 
-      <section className="border-y border-gray pt-9 pb-14">
-        <Container>
-          <Flex>
+      <section className="border-b border-gray pt-9 pb-14">
+        <Container className="border-t border-gray">
+          <Flex className="pt-9">
             <div className="w-3/12">
-              <h1 className="text-lg mb-2 w-full font-mont font-semibold">Contact us</h1>
-              <div className="text-[13px] font-mont pb-3">
+              <h1 className="text-lg mb-2 w-full font-mont font-semibold">
+                Contact us
+              </h1>
+              <div className="text-[13px] font-mont pb-3 text-gray-600">
                 <p>Classyshop - Mega Super Store</p>
-              <p>507-Union Trade Centre France</p>
+                <p>507-Union Trade Centre France</p>
               </div>
-              <a href="" className="pb-2.5 text-[13px] font-mont hover:text-red duration-500">sales@yourcompany.com</a>
-              <p className="mt-3 mb-5 text-[22px] font-mont font-semibold text-red">(+91) 9876-543-210</p>
+              <a
+                href=""
+                className="pb-2.5 text-[13px] font-mont hover:text-red duration-500  text-gray-600"
+              >
+                sales@yourcompany.com
+              </a>
+              <p className="mt-3 mb-5 text-[22px] font-mont font-semibold text-red">
+                (+91) 9876-543-210
+              </p>
 
-              <Flex className='gap-3'>
+              <Flex className="gap-3">
                 <IoChatboxOutline className="text-[40px] font-bold text-red" />
                 <div>
-                    <h1 className="text-lg w-full font-mont font-semibold">Online Chat</h1>
-                    <h1 className="text-lg w-full font-mont font-semibold">Get Expert Help</h1>
+                  <h1 className="text-lg w-full font-mont font-semibold">
+                    Online Chat
+                  </h1>
+                  <h1 className="text-lg w-full font-mont font-semibold">
+                    Get Expert Help
+                  </h1>
                 </div>
               </Flex>
             </div>
 
-          <div className="w-5/12 flex justify-evenly">
-          <Flex className='flex-col gap-2'>
-            <h1 className="text-lg mb-2 w-full font-mont font-semibold">Products</h1>
-          <List text='Prices drop' className='!font-normal'/>
-          <List text='New Products' className='!font-normal'/>
-          <List text='Best sales' className='!font-normal'/>
-          <List text='Contact us' className='!font-normal'/>
-          <List text='Sitemap' className='!font-normal'/>
-          <List text='Stores' className='!font-normal'/>
-          </Flex>
+            <div className="w-5/12 flex justify-evenly border-gray border-l-[0.5px]">
+              <Flex className="flex-col gap-2">
+                <h1 className="text-lg mb-2 w-full font-mont font-semibold">
+                  Products
+                </h1>
+                <List
+                  text="Prices drop"
+                  className="!font-normal  text-gray-600"
+                />
+                <List
+                  text="New Products"
+                  className="!font-normal  text-gray-600"
+                />
+                <List
+                  text="Best sales"
+                  className="!font-normal  text-gray-600"
+                />
+                <List
+                  text="Contact us"
+                  className="!font-normal  text-gray-600"
+                />
+                <List text="Sitemap" className="!font-normal  text-gray-600" />
+                <List text="Stores" className="!font-normal  text-gray-600" />
+              </Flex>
 
-          <Flex className='flex-col gap-2'>
-            <h1 className="text-lg mb-2  font-mont font-semibold">Our company</h1>
-          <List text='Delivery' className='!font-normal'/>
-          <List text='Legal Notice' className='!font-normal'/>
-          <List text='Terms and conditions of use' className='!font-normal'/>
-          <List text='About us' className='!font-normal'/>
-          <List text='Secure payment' className='!font-normal'/>
-          <List text='Login' className='!font-normal'/>
-          </Flex>
-          </div>
+              <Flex className="flex-col gap-2">
+                <h1 className="text-lg mb-2  font-mont font-semibold">
+                  Our company
+                </h1>
+                <List text="Delivery" className="!font-normal  text-gray-600" />
+                <List
+                  text="Legal Notice"
+                  className="!font-normal  text-gray-600"
+                />
+                <List
+                  text="Terms and conditions of use"
+                  className="!font-normal  text-gray-600"
+                />
+                <List text="About us" className="!font-normal  text-gray-600" />
+                <List
+                  text="Secure payment"
+                  className="!font-normal  text-gray-600"
+                />
+                <List text="Login" className="!font-normal  text-gray-600" />
+              </Flex>
+            </div>
 
-          <div className="w-4/12">
-                      <h1 className="text-lg mb-2 w-full font-mont font-semibold">Subscribe to newsletter</h1>
-                      <p>Subscribe to our latest newsletter to get news about special discounts.</p>
-          </div>
+            <div className="w-4/12">
+              <h1 className="text-lg mb-2 w-full font-mont font-semibold">
+                Subscribe to newsletter
+              </h1>
+              <p className="text-[13px] my-8 w-[90%]  text-gray-600">
+                Subscribe to our latest newsletter to get news about special
+                discounts.
+              </p>
+              <div>
+                <input
+                  type="email"
+                  name=""
+                  id=""
+                  placeholder="Your Email Address"
+                  className="pl-4 pr-4 rounded-sm mb-4 outline-none w-full h-[45px] border border-gray bg-body text-gray-900 focus:border-[rgba(0,0,0,0.3)]"
+                />
+              </div>
+              <button
+                type="submit"
+                className="py-2.5 px-5 rounded-md hover:bg-black duration-500 cursor-pointer bg-red text-white font-mont font-semibold"
+              >
+                SUBSCRIBE
+              </button>
+              <label className="gap-3.5 flex items-center mt-4">
+                <input type="checkbox" name="" id="" className="w-5 h-5 " />
+                <p className="text-[13px]">
+                  I agree to the terms and conditions and the privacy policy
+                </p>
+              </label>
+            </div>
           </Flex>
         </Container>
       </section>
 
-
       <Container className="bg-body py-5">
         <Flex className="justify-between items-center">
-          <Flex className='justify-center items-center gap-2'>
-            <FaFacebookF />
-            <CiYoutube />
-            <FaPinterestP />
-            <FaInstagram />
+          <Flex className="justify-center items-center gap-2">
+            <div className="hover:bg-red hover:text-white duration-500 w-9 h-9 border border-gray rounded-full flex items-center justify-center cursor-pointer text-gray-700">
+              <FaFacebookF />
+            </div>
+            <div className="hover:bg-red hover:text-white duration-500 w-9 h-9 border border-gray rounded-full flex items-center justify-center cursor-pointer text-gray-700">
+              <CiYoutube />
+            </div>
+            <div className="hover:bg-red hover:text-white duration-500 w-9 h-9 border border-gray rounded-full flex items-center justify-center cursor-pointer text-gray-700">
+              <FaPinterestP />
+            </div>
+            <div className="hover:bg-red hover:text-white duration-500 w-9 h-9 border border-gray rounded-full flex items-center justify-center cursor-pointer text-gray-700">
+              <FaInstagram />
+            </div>
           </Flex>
-          <p>© 2024 - Ecommerce Template</p>
+          <p className="text-[13px]  text-gray-600">© 2024 - Ecommerce Template</p>
           <div className="h-[23px] w-[203px]">
             <Image className="h-full w-full" src={Footimg} />
           </div>
