@@ -2,12 +2,15 @@
 
 body {
     background-color: #fcfcfc;
+    font-family: "Montserrat", sans-serif;
+    /* color: #3e3e3e; */
 }
 
 @theme {
     --max-width-container: 95%;
     --color-red: #FF5252;
     --color-gray: #dfdfdf;
+    --color-gray1: #e5e7eb;
     --font-mont: "Montserrat", sans-serif;
     --color-body: #fcfcfc;
 
