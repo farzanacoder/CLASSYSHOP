@@ -6,12 +6,28 @@ import { FaFacebookF, FaInstagram, FaPinterestP } from "react-icons/fa";
 import { CiYoutube } from "react-icons/ci";
 import Container from "../components/Container";
 import List from "../components/List";
-import { IoChatboxOutline } from "react-icons/io5";
+import { IoChatboxOutline, IoGiftOutline } from "react-icons/io5";
+import FooterBrand from "../components/FooterBrand";
+import { LiaShippingFastSolid } from "react-icons/lia";
+import { BsArrowLeftSquare } from "react-icons/bs";
+import { BiSupport } from "react-icons/bi";
+import { MdOutlinePayment } from "react-icons/md";
 
 const Footer = () => {
   return (
     <footer className="bg-gray-50">
-      <section className="py-10 bg-amber-50">sdh</section>
+
+      <section className="py-14">
+        <Container>
+          <Flex className='justify-evenly'>
+            <FooterBrand icon={<LiaShippingFastSolid className="text-4xl mb-2 hover:text-red duration-500 hover:-translate-y-2 text-gray-800"/>} title='Free Shipping' subtitle='For all Orders Over $100'/> 
+            <FooterBrand icon={<BsArrowLeftSquare className="text-4xl mb-2 hover:text-red duration-500 hover:-translate-y-2 text-gray-800"/>} title='30 Days Returns' subtitle='For an Exchange Product'/> 
+            <FooterBrand icon={<MdOutlinePayment className="text-4xl mb-2 hover:text-red duration-500 hover:-translate-y-2 text-gray-800"/>} title='Secured Payment' subtitle='Payment Cards Accepted'/> 
+            <FooterBrand icon={<IoGiftOutline className="text-4xl mb-2 hover:text-red duration-500 hover:-translate-y-2 text-gray-800"/>} title='Special Gifts' subtitle='Our First Product Order'/> 
+            <FooterBrand icon={<BiSupport className="text-4xl mb-2 hover:text-red duration-500 hover:-translate-y-2 text-gray-800"/>} title='Support 24/7' subtitle='Contact us Anytime'/> 
+          </Flex>
+        </Container>
+      </section>
 
       <section className="border-b border-gray pt-9 pb-14">
         <Container className="border-t border-gray">
