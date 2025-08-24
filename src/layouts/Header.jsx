@@ -73,7 +73,7 @@ const Header = () => {
                 <List text='Jewellery'/>
                 </Flex>
 
-                <Flex className='w-1/6 items-center gap-3.5'>
+                <Flex className='w-1/6 items-center gap-3'>
                 <GoRocket />
                 <p className=' text-sm'>Free International Delivery</p>
                 </Flex>
