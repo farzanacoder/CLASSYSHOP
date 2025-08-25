@@ -7,7 +7,7 @@ import Cartimg from "../assets/phn.png";
 
 const Products = () => {
   return (
-    <section>
+    <section className="bg-white">
       <Container>
         <Flex className="justify-between items-center flex-col lg:flex-row py-3 lg:py-8">
           <div>
@@ -29,8 +29,13 @@ const Products = () => {
         </Flex>
 
 
-        <Flex>
-          <CartItem ShpBrnd={Cartimg}/>
+        <Flex className='pb-56 gap-2'>
+          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
+          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
+          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
+          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
+          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
+          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
         </Flex>
       </Container>
     </section>
