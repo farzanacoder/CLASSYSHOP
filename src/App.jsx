@@ -4,6 +4,7 @@ import Header from './layouts/Header'
 import Footer from './layouts/Footer'
 import Brand from './layouts/Brand'
 import Shipping from './layouts/Shipping'
+import Collection from './layouts/Collection'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Banner/>
       <Brand/>
       <Shipping/>
+      <Collection/>
       <Footer/>
     </>
   )
