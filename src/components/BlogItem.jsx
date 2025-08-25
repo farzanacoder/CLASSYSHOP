@@ -7,7 +7,7 @@ import { FaRegClock } from "react-icons/fa";
 const BlogItem = ({title , subtitle , ShpBrnd}) => {
   return (
    <div className="pb-12">
-     <div className='relative overflow-hidden group rounded-md w-[290px] h-[200px] my-6'>
+     <div className='relative cursor-pointer overflow-hidden group rounded-md w-[290px] h-[200px] my-6'>
         <Image className='w-full h-full duration-150 transition-transform group-hover:scale-105 group-hover:rotate-1' src={ShpBrnd}/>
         <Flex className="absolute bottom-[15px] rounded-md p-1 text-[12px] right-[15px] text-white bg-red flex items-center justify-center gap-1.5"><FaRegClock />2025-03-12 </Flex>
     </div>
