@@ -1,0 +1,25 @@
+import React from 'react'
+import Container from '../components/Container'
+import Flex from '../components/Flex'
+import BlogItem from '../components/BlogItem'
+import Blog1 from '../assets/blog3.png'
+import Blog2 from '../assets/blog2.png'
+import Blog3 from '../assets/blog1.png'
+import Blog4 from '../assets/blog3.png'
+
+const Blog = () => {
+  return (
+   <section>
+    <Container>
+        <Flex className=''>
+            <BlogItem ShpBrnd={Blog1} title='sustainable living through cutting-edge prefabricated homes' subtitle='Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by g...'/>
+            <BlogItem ShpBrnd={Blog2} title='sustainable living through cutting-edge prefabricated homes' subtitle='Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by g...'/>
+            <BlogItem ShpBrnd={Blog3} title='sustainable living through cutting-edge prefabricated homes' subtitle='Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by g...'/>
+            <BlogItem ShpBrnd={Blog4} title='sustainable living through cutting-edge prefabricated homes' subtitle='Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by g...'/>
+        </Flex>
+    </Container>
+   </section>
+  )
+}
+
+export default Blog

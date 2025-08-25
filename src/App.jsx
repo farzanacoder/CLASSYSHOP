@@ -6,6 +6,7 @@ import Brand from './layouts/Brand'
 import Shipping from './layouts/Shipping'
 import Collection from './layouts/Collection'
 import BrandImg from './layouts/BrandImg'
+import Blog from './layouts/Blog'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Shipping/>
       <Collection/>
       <BrandImg/>
+      <Blog/>
       <Footer/>
     </>
   )

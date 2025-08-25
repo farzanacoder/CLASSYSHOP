@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "./Image";
-import Brannd1 from "../assets/brand1.png";
 import Flex from "./Flex";
 
 const BrandItem = ({img , text}) => {
