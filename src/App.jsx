@@ -14,6 +14,7 @@ import Register from './pages/Register';
 import Shop from './pages/Shop';
 import WishList from './pages/WishList';
 import RootLayout from './layouts/RootLayout';
+import Error from './pages/Error';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +26,7 @@ const router = createBrowserRouter(
      <Route path="/register" element={<Register />}></Route>
      <Route path="/shop" element={<Shop />}></Route>
      <Route path="/wishList" element={<WishList />}></Route>
+     <Route path="/*" element={<Error />}></Route>
    </Route>
   )
 );
