@@ -18,7 +18,7 @@ const Login = () => {
           <div className="relative w-full">
             <input
               type="email"
-              id="password"
+              id="email"
               placeholder=" "
               className="peer hover:border-black w-full h-[60px] px-4 pt-5 rounded-md border border-gray-400 text-gray-900 focus:border-blue-500 focus:ring-1 focus:ring-blue-400 outline-none"
             />
