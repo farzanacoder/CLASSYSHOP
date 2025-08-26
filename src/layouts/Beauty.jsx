@@ -4,32 +4,26 @@ import Flex from "../components/Flex";
 import CartItem from "../components/CartItem";
 import List from "../components/List";
 import Cartimg from "../assets/phn.png";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
-const Products = () => {
+const Beauty = () => {
   return (
     <section className="bg-white">
       <Container>
         <Flex className="justify-between items-center flex-col lg:flex-row py-3 lg:py-8">
-          <div>
             <h1 className="text-xl mb-2 w-full font-mont font-semibold">
-              Popular Products
+              Beauty
             </h1>
-            <p className="text-gray-800 text-sm">Do not miss the current offers until the end of March.</p>
-          </div>
-
-          <Flex className="gap-9">
-            <List className='text-gray-600 text-sm border-b-2 pb-2' text='FASHION'/>
-            <List className='text-gray-600 text-sm border-b-2 pb-2' text='ELECTRONICS'/>
-            <List className='text-gray-600 text-sm border-b-2 pb-2' text='BAGS'/>
-            <List className='text-gray-600 text-sm border-b-2 pb-2' text='FOOTWEAR'/>
-            <List className='text-gray-600 text-sm border-b-2 pb-2' text='GROCERIES'/>
-            <List className='text-gray-600 text-sm border-b-2 pb-2' text='BEAUTY'/>
-            <List className='text-gray-600 text-sm border-b-2 pb-2' text='WELLNESS'/>
+          <Flex className='items-center justify-evenly bg-gray-200 hover:bg-gray-300 cursor-pointer duration-300 w-[120px] rounded-sm py-2'>
+            <a href="http://" className="text-sm text-black capitalize">view all</a>
+            <FaLongArrowAltRight />
           </Flex>
+
+         
         </Flex>
 
 
-        <Flex className='gap-2'>
+        <Flex className=' gap-2'>
           <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
           <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
           <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
@@ -42,4 +36,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Beauty;

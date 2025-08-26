@@ -5,7 +5,7 @@ import { IoStar } from 'react-icons/io5'
 
 const CartItem = ({subtitle , title , price , ShpBrnd , className}) => {
   return (
-      <div className='relative overflow-hidden group rounded-md w-[205px] h-[390px] shadow-lg border border-gray-300'>
+      <div className='relative overflow-hidden group rounded-md w-[205px] h-[390px] shadow-sm border border-gray-300'>
         <Image className='w-full duration-150 transition-transform rounded-none cursor-pointer group-hover:scale-105' src={ShpBrnd}/>
 
     <Flex className={`${className} pl-3.5 absolute top-44 h-[200px] flex-col text-left gap-1 items-start justify-center`}>
@@ -19,7 +19,7 @@ const CartItem = ({subtitle , title , price , ShpBrnd , className}) => {
         <IoStar />
 
       </Flex>
-        <Flex className='justify-between pt-1.5 pb-5'>
+        <Flex className='gap-9 pt-1.5 pb-5'>
                   <del className="text-base text-gray-600 font-semibold">{price}</del>
                   <p className="text-base text-red font-semibold">{price}</p>
         </Flex>

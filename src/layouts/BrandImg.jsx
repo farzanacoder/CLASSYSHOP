@@ -9,7 +9,7 @@ import Brndimg3 from '../assets/bnd4.png'
 
 const BrandImg = () => {
   return (
-    <div className='bg-body py-14'>
+    <div className='py-14'>
         <Container>
             <Flex className='justify-between'>
                 <div className='h-[200px] w-[316px] group overflow-hidden rounded-md'>
