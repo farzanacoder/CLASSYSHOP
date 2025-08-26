@@ -16,6 +16,7 @@ import Beauty from './layouts/Beauty'
 import Wellness from './layouts/Wellness'
 import Footwear from './layouts/Footwear'
 import Electrnics from './layouts/Electrnics'
+import BuyNow from './layouts/BuyNow'
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
       <Banner/>
       <Brand/>
       <Products/>
+      <BuyNow/>
       <Shipping/>
       <Collection/>
       <LatestPrdct/>

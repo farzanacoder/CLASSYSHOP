@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+/* Scrollbar style */
+::-webkit-scrollbar{
+    width: 8px;
+}
+/* ::-webkit-scrollbar-track{
+    background: #FF5252;
+} */
+::-webkit-scrollbar-thumb{
+    background-color: #FF5252;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #e43333;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     /* color: #3e3e3e; */

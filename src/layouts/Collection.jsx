@@ -9,7 +9,7 @@ import SHOP4 from '../assets/shop4.png'
 
 const Collection = () => {
   return (
-    <section className='py-20 w-full'>
+    <section className='w-full'>
         <Container>
             <Flex className='justify-between flex-col lg:flex-row'>
                 <ShopBrand ShpBrnd={SHOP1} title='Buy women productss with low price' subtitle='₹999' btn='shop now'/>
