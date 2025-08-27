@@ -1,7 +1,5 @@
 import React from 'react'
 import Banner from '../layouts/Banner'
-import Header from '../layouts/Header'
-import Footer from '../layouts/Footer'
 import Brand from '../layouts/Brand'
 import Shipping from '../layouts/Shipping'
 import Collection from '../layouts/Collection'
@@ -21,7 +19,6 @@ import BuyNow from '../layouts/BuyNow'
 const Home = () => {
   return (
     <>
-        <Header/>
       <Banner/>
       <Brand/>
       <Products/>
@@ -38,7 +35,6 @@ const Home = () => {
       <Footwear/>
       <Electrnics/>
       <Blog/>
-      <Footer/>
     </>
   )
 }
