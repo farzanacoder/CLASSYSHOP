@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Container from "../components/Container";
 import Flex from "../components/Flex";
 import CartItem from "../components/CartItem";
 import List from "../components/List";
 import Cartimg from "../assets/phn.png";
+import axios from "axios";
 
 const Products = () => {
+  let [category , setCategory] = useState([])
+ useEffect(()=>{
+  async function fetchData() {
+    let data = await axios.get('https://serviceapi.spicezgold.com/api/category')
+    setCategory(data.data.category)
+    
+  }
+
+  fetchData()
+ } , [])
+
+
   return (
     <section className="bg-white">
       <Container>

@@ -17,11 +17,11 @@ const Footer = () => {
   return (
     <footer className="bg-gray-50">
 
-      <section className="py-14">
+      <section className=" py-0 pb-5 md:pb-0">
         <Container>
-          <Flex className='justify-evenly'>
+        <Flex className='md:justify-evenly md:py-14 py-5 md:gap-0 gap-6 md:w-full md:h-full w-full overflow-auto md:px-0 px-5'>
             <FooterBrand icon={<LiaShippingFastSolid className="text-4xl mb-2 hover:text-red duration-500 hover:-translate-y-2 text-gray-800"/>} title='Free Shipping' subtitle='For all Orders Over $100'/> 
-            <FooterBrand icon={<BsArrowLeftSquare className="text-4xl mb-2 hover:text-red duration-500 hover:-translate-y-2 text-gray-800"/>} title='30 Days Returns' subtitle='For an Exchange Product'/> 
+            <FooterBrand icon={<BsArrowLeftSquare className="text-3xl mb-2 hover:text-red duration-500 hover:-translate-y-2 text-gray-800"/>} title='30 Days Returns' subtitle='For an Exchange Product'/> 
             <FooterBrand icon={<MdOutlinePayment className="text-4xl mb-2 hover:text-red duration-500 hover:-translate-y-2 text-gray-800"/>} title='Secured Payment' subtitle='Payment Cards Accepted'/> 
             <FooterBrand icon={<IoGiftOutline className="text-4xl mb-2 hover:text-red duration-500 hover:-translate-y-2 text-gray-800"/>} title='Special Gifts' subtitle='Our First Product Order'/> 
             <FooterBrand icon={<BiSupport className="text-4xl mb-2 hover:text-red duration-500 hover:-translate-y-2 text-gray-800"/>} title='Support 24/7' subtitle='Contact us Anytime'/> 
@@ -29,10 +29,11 @@ const Footer = () => {
         </Container>
       </section>
 
-      <section className="border-b border-gray pt-9 pb-14">
+      <section className="border-b border-gray pt-0 md:pt-9 pb-14">
         <Container className="border-t border-gray">
-          <Flex className="pt-9">
-            <div className="w-3/12">
+          <Flex className="pt-9 md:flex-row flex-col">
+
+            <div className="md:w-3/12 pb-7 md:pb-0 w-full border-gray border-r-[0.5px]">
               <h1 className="text-lg mb-2 w-full font-mont font-semibold">
                 Contact us
               </h1>
@@ -63,7 +64,9 @@ const Footer = () => {
               </Flex>
             </div>
 
-            <div className="w-5/12 flex justify-evenly border-gray border-l-[0.5px]">
+
+
+            <div className="md:w-5/12 w-full flex md:gap-0 gap-16 justify-evenly">
               <Flex className="flex-col gap-2">
                 <h1 className="text-lg mb-2 w-full font-mont font-semibold">
                   Products
@@ -110,11 +113,13 @@ const Footer = () => {
               </Flex>
             </div>
 
-            <div className="w-4/12">
+
+
+            <div className="md:w-4/12 w-full pt-7 md:pt-0">
               <h1 className="text-lg mb-2 w-full font-mont font-semibold">
                 Subscribe to newsletter
               </h1>
-              <p className="text-[13px] my-8 w-[90%]  text-gray-600">
+              <p className="text-[13px] my-5 md:my-8 w-[90%]  text-gray-600">
                 Subscribe to our latest newsletter to get news about special
                 discounts.
               </p>
@@ -145,8 +150,8 @@ const Footer = () => {
       </section>
 
       <Container className="bg-body py-5">
-        <Flex className="justify-between items-center">
-          <Flex className="justify-center items-center gap-2">
+        <Flex className="justify-between lg:flex-row flex-col items-center">
+          <Flex className="justify-center items-center mb-10 lg:mb-0 gap-2">
             <div className="hover:bg-red hover:text-white duration-500 w-9 h-9 border border-gray rounded-full flex items-center justify-center cursor-pointer text-gray-700">
               <FaFacebookF />
             </div>
@@ -160,7 +165,7 @@ const Footer = () => {
               <FaInstagram />
             </div>
           </Flex>
-          <p className="text-[13px]  text-gray-600">© 2024 - Ecommerce Template</p>
+          <p className="text-[13px] mb-5 lg:mb-0 text-gray-600">© 2024 - Ecommerce Template</p>
           <div className="h-[23px] w-[203px]">
             <Image className="h-full w-full" src={Footimg} />
           </div>

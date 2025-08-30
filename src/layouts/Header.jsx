@@ -12,8 +12,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import List from "../components/List";
 import { RxCross2 } from "react-icons/rx";
 // eslint-disable-next-line no-unused-vars
-import { AnimatePresence , motion} from "framer-motion";
-
+import { AnimatePresence, motion } from "framer-motion";
 
 const Header = () => {
   let [shoping, setShoping] = useState(false);
@@ -71,49 +70,55 @@ const Header = () => {
               <span>|</span>
               <p className="hover:text-red duration-500">Register</p>
               <FiHeart className="hover:text-red duration-500 text-2xl" />
+              
 
               <div>
-      <MdOutlineShoppingCart
-        onClick={() => setShoping(true)}
-        className="hover:text-red-500 duration-300 text-3xl cursor-pointer"
-      />
+                <MdOutlineShoppingCart
+                  onClick={() => setShoping(true)}
+                  className="hover:text-red-500 duration-300 text-3xl cursor-pointer"
+                />
 
-      <AnimatePresence>
-        {shoping && (
-          <div className="fixed z-40 inset-0">
-            <div
-              onClick={() => setShoping(false)}
-              className="fixed inset-0 bg-black/45"
-            ></div>
+                <AnimatePresence>
+                  {shoping && (
+                    <>
+                      <motion.div
+                        onClick={() => setShoping(false)}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 0.45 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed inset-0 bg-black z-40"
+                      />
 
-            {/* ✅ motion.div দিয়ে animation */}
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ duration: 0.4 }}
-              className="absolute right-0 top-0 w-[390px] h-full bg-white shadow-lg"
-            >
-              <div className="flex justify-between items-center p-4 border-b">
-                <h1 className="font-semibold">Shopping Cart (0)</h1>
-                <button onClick={() => setShoping(false)}>
-                  <RxCross2 className="text-xl" />
-                </button>
+                      <motion.div
+                        initial={{ x: "100%" }}
+                        animate={{ x: 0 }}
+                        exit={{ x: "100%" }}
+                        transition={{ duration: 0.4 }}
+                        className="fixed right-0 top-0 w-[390px] h-full bg-white z-50"
+                      >
+                        <div className="flex justify-between items-center p-4 border-b">
+                          <h1 className="font-semibold">Shopping Cart (0)</h1>
+                          <button onClick={() => setShoping(false)}>
+                            <RxCross2 className="text-xl cursor-pointer" />
+                          </button>
+                        </div>
+
+                        <div className="flex flex-col items-center justify-center gap-3 mt-6">
+                          <p className="text-gray-600 text-sm">
+                            Your Cart is currently empty
+                          </p>
+                          <button className="px-10 py-2 rounded bg-red-500 text-white hover:bg-red-600 duration-700">
+                            Continue Shopping
+                          </button>
+                        </div>
+                      </motion.div>
+                    </>
+                  )}
+                </AnimatePresence>
               </div>
 
-              <div className="flex flex-col items-center justify-center gap-3 mt-6">
-                <p className="text-gray-600 text-sm">
-                  Your Cart is currently empty
-                </p>
-                <button className="px-10 py-2 rounded bg-red-500 text-white hover:bg-red-600 duration-700">
-                  Continue Shopping
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
-    </div>
+
             </Flex>
           </Flex>
         </Container>
