@@ -15,7 +15,7 @@ const Brand = () => {
   return (
     <section className='bg-purple-100'>
         <Container>
-            <Flex className='justify-between py-8'>
+            <Flex className='flex flex-wrap justify-between gap-2 md:gap-0 py-4 md:py-8'>
                 <BrandItem img={Brand1} text='Fashion'/>
                 <BrandItem img={Brand2} text='Fashion'/>
                 <BrandItem img={Brand3} text='Fashion'/>

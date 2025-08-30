@@ -23,7 +23,7 @@ const Electrnics = () => {
         </Flex>
 
 
-      <Flex className='flex flex-wrap gap-2 overflow-x-auto'>
+      <Flex className='flex flex-wrap gap-2 justify-between'>
           <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
           <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
           <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
