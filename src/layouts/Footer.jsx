@@ -17,9 +17,9 @@ const Footer = () => {
   return (
     <footer className="bg-gray-50">
 
-      <section className=" py-0 pb-5 md:pb-0">
+      <section className="md:mt-0 mt-7 py-0 pb-5 md:pb-0">
         <Container>
-        <Flex className='md:justify-evenly md:py-14 py-5 md:gap-0 gap-6 md:w-full md:h-full w-full overflow-auto md:px-0 px-5'>
+        <Flex className='md:justify-evenly md:py-14 py-5 md:gap-0 gap-6 md:w-full md:h-full w-full overflow-auto'>
             <FooterBrand icon={<LiaShippingFastSolid className="text-4xl mb-2 hover:text-red duration-500 hover:-translate-y-2 text-gray-800"/>} title='Free Shipping' subtitle='For all Orders Over $100'/> 
             <FooterBrand icon={<BsArrowLeftSquare className="text-3xl mb-2 hover:text-red duration-500 hover:-translate-y-2 text-gray-800"/>} title='30 Days Returns' subtitle='For an Exchange Product'/> 
             <FooterBrand icon={<MdOutlinePayment className="text-4xl mb-2 hover:text-red duration-500 hover:-translate-y-2 text-gray-800"/>} title='Secured Payment' subtitle='Payment Cards Accepted'/> 

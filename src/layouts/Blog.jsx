@@ -14,7 +14,7 @@ const Blog = () => {
       <h1 className="text-xl mt-10 w-full font-mont font-semibold">
               From The Blog
             </h1>
-        <Flex className=''>
+        <Flex className='md:flex-row flex-col w-full'>
             <BlogItem ShpBrnd={Blog1} title='sustainable living through cutting-edge prefabricated homes' subtitle='Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by g...'/>
             <BlogItem ShpBrnd={Blog2} title='sustainable living through cutting-edge prefabricated homes' subtitle='Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by g...'/>
             <BlogItem ShpBrnd={Blog3} title='sustainable living through cutting-edge prefabricated homes' subtitle='Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by g...'/>

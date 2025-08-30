@@ -10,7 +10,7 @@ const Electrnics = () => {
   return (
     <section className="bg-white">
       <Container>
-        <Flex className="justify-between items-center flex-col lg:flex-row py-3 lg:py-8">
+        <Flex className="justify-between items-center flex-row py-3 lg:py-8">
             <h1 className="text-xl mb-2 w-full font-mont font-semibold">
               Electronics
             </h1>
@@ -23,7 +23,7 @@ const Electrnics = () => {
         </Flex>
 
 
-        <Flex className=' gap-2'>
+      <Flex className='flex flex-wrap gap-2 overflow-x-auto'>
           <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
           <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
           <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
