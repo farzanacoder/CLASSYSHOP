@@ -11,7 +11,7 @@ const BrandImg = () => {
   return (
     <div className='py-14'>
         <Container>
-            <Flex className='justify-between'>
+            <Flex className='justify-between  md:flex-row flex-wrap gap-2 flex-col'>
                 <div className='h-[200px] w-[316px] group overflow-hidden rounded-md'>
                     <Image className='h-full w-full group-hover:scale-105 group-hover:rotate-1 duration-200 cursor-pointer' src={Brndimg}/>
                 </div>
