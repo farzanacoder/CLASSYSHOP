@@ -77,10 +77,12 @@ const BuyNow = () => {
     </div>
 
 
-                <Flex className='md:flex-col py-4 md:py-0 h-full gap-3 md:gap-[70px] md:overflow-visible overflow-x-auto w-[600px] flex-row'>
+                <div className='md:overflow-visible scrlbar overflow-x-auto'>
+                  <Flex className='md:flex-col py-4 md:py-0 h-full gap-3 md:gap-[70px] min-w-max flex-row'>
                 <ShopBrand position='left' ShpBrnd={SHOP3} title='Buy women productss with low price' subtitle='₹999' btn='shop now'/>
                 <ShopBrand ShpBrnd={SHOP4} title='Buy women productss with low price' subtitle='₹999' btn='shop now'/>
                 </Flex>
+                </div>
             </Flex>
         </Container>
     </section>

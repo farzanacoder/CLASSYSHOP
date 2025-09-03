@@ -1,6 +1,15 @@
 @import "tailwindcss";
 
 /* Scrollbar style */
+.scrlbar{
+    scrollbar-width: none;
+}
+.scrlbar::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* Scrollbar style */
 ::-webkit-scrollbar{
     width: 8px;
 }

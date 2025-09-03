@@ -11,12 +11,14 @@ const Collection = () => {
   return (
     <section>
         <Container>
-            <Flex className='justify-between gap-3 w-[1220px] md:w-full md:overflow-visible overflow-hidden'>
+            <div className='overflow-x-auto scrlbar md:overflow-hidden'>
+              <Flex className='min-w-max gap-3 '>
                 <ShopBrand className='' ShpBrnd={SHOP1} title='Buy women productss with low price' subtitle='₹999' btn='shop now'/>
                 <ShopBrand position='left' ShpBrnd={SHOP2} title='Buy women productss with low price' subtitle='₹999' btn='shop now'/>
                 <ShopBrand position='left' ShpBrnd={SHOP3} title='Buy women productss with low price' subtitle='₹999' btn='shop now'/>
                 <ShopBrand ShpBrnd={SHOP4} title='Buy women productss with low price' subtitle='₹999' btn='shop now'/>
             </Flex>
+            </div>
         </Container>
     </section>
   )

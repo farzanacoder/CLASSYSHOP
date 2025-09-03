@@ -23,14 +23,15 @@ const Products = () => {
     <section className="bg-white">
       <Container>
         <Flex className="justify-between items-center flex-col lg:flex-row py-3 lg:py-8">
-          <div>
-            <h1 className="text-xl mb-2 w-full font-mont font-semibold">
+          <div className="pr-10 md:pr-96">
+            <h1 className="md:text-xl text-md mb-2 w-full font-mont font-semibold">
               Popular Products
             </h1>
-            <p className="text-gray-800 text-sm">Do not miss the current offers until the end of March.</p>
+            <p className="text-gray-800 text-[12px] md:text-sm">Do not miss the current offers until the end of March.</p>
           </div>
 
-          <Flex className="gap-9">
+          <div className="overflow-x-auto md:overflow-hidden w-full scrlbar pt-5">
+            <Flex className="gap-9 min-w-max">
             <List className='text-gray-600 text-sm border-b-2 pb-2' text='FASHION'/>
             <List className='text-gray-600 text-sm border-b-2 pb-2' text='ELECTRONICS'/>
             <List className='text-gray-600 text-sm border-b-2 pb-2' text='BAGS'/>
@@ -39,6 +40,7 @@ const Products = () => {
             <List className='text-gray-600 text-sm border-b-2 pb-2' text='BEAUTY'/>
             <List className='text-gray-600 text-sm border-b-2 pb-2' text='WELLNESS'/>
           </Flex>
+          </div>
         </Flex>
 
 
