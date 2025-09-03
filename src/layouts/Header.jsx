@@ -20,7 +20,7 @@ const Header = () => {
   let [menuclick, setMenuClick] = useState(false);
 
   return (
-    <header className="font-mont">
+    <header className="font-mont sticky top-0 z-50 bg-white shadow-md">
       <div className=" border-b border-gray">
         <Container>
           <Flex className=" hidden lg:flex justify-between items-center h-12 text-sm font-normal">
@@ -51,7 +51,7 @@ const Header = () => {
 
 
 
-     <div className="fixed top-12 w-full bg-white z-50 shadow-md">
+     <div className="">
        <div className="border-b border-gray">
         <Container>
           <Flex className="py-4 gap-16 md:gap-0 items-center justify-between">
