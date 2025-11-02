@@ -3,20 +3,28 @@ import Container from "../components/Container";
 import Flex from "../components/Flex";
 import CartItem from "../components/CartItem";
 import List from "../components/List";
-import Cartimg from "../assets/phn.png";
-import axios from "axios";
+import Loading from "../components/Loading";
+// import Cartimg from "../assets/phn.png";
+import { prdctservices } from "../services/api";
 
 const Products = () => {
-  let [category , setCategory] = useState([])
- useEffect(()=>{
-  async function fetchData() {
-    let data = await axios.get('https://serviceapi.spicezgold.com/api/category')
-    setCategory(data.data.category)
+const [products , setProducts] = useState([]);
+const [loading , setLoading] = useState(true);
+
+useEffect(()=>{
+  try {
+    (async ()=>{
+      const res = await prdctservices.prdct()
+      setProducts(res.products);
+      
+      setLoading(false)
+    })();
+    
+  } catch (error) {
+    console.log(error);
     
   }
-
-  fetchData()
- } , [])
+},[]);
 
 
   return (
@@ -44,13 +52,15 @@ const Products = () => {
         </Flex>
 
 
-        <Flex className='gap-2'>
-          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
-          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
-          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
-          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
-          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
-          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
+        <Flex className='flex-wrap gap-2'>
+          {
+            loading?
+            Array.from({length: 6}).map((_ , index) =>(
+              <Loading key={index}/>
+            ))
+            :
+            products.map((item)=> <CartItem data={item} key={item._id}/>)
+          }
         </Flex>
       </Container>
     </section>

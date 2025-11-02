@@ -17,6 +17,7 @@ import Error from './pages/Error';
 import BlogPage1 from './pages/BlogPage1';
 import BlogPage2 from './pages/BlogPage2';
 import BlogPage3 from './pages/BlogPage3';
+import PrdctDetails from './components/PrdctDetails';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
      <Route path="/register" element={<Register />}></Route>
      <Route path="/shop" element={<Shop />}></Route>
      <Route path="/wishList" element={<WishList />}></Route>
+     <Route path="/prdctdetails/:id" element={<PrdctDetails />}></Route>
      <Route path="/*" element={<Error />}></Route>
    </Route>
   )

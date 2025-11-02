@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Container from "../components/Container";
 import Flex from "../components/Flex";
 import CartItem from "../components/CartItem";
-import List from "../components/List";
-import Cartimg from "../assets/phn.png";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { prdctservices } from "../services/api";
+import Loading from "../components/Loading";
 
 const LatestPrdct = () => {
+  const [products , setProducts] = useState([]);
+  const [loading , setLoading] = useState(true);
+  
+  useEffect(()=>{
+    try {
+      (async ()=>{
+        const res = await prdctservices.prdct()
+        setProducts(res.products);
+        
+        setLoading(false)
+      })();
+      
+    } catch (error) {
+      console.log(error);
+      
+    }
+  },[]);
   return (
     <section className="bg-white">
       <Container>
@@ -23,13 +40,15 @@ const LatestPrdct = () => {
         </Flex>
 
 
-        <Flex className='gap-2'>
-          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
-          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
-          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
-          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
-          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
-          <CartItem ShpBrnd={Cartimg} title='Apple' subtitle='Apple iPhone 15 (Blue, 12...)' price='$1599.00' />
+         <Flex className='flex-wrap gap-2'>
+          {
+            loading?
+            Array.from({length: 6}).map((_ , index) =>(
+              <Loading key={index}/>
+            ))
+            :
+            products.map((item)=> <CartItem data={item} key={item._id}/>)
+          }
         </Flex>
       </Container>
     </section>
