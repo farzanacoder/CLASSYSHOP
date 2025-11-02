@@ -5,10 +5,10 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaRegClock } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const BlogItem = ({title , subtitle , ShpBrnd}) => {
+const BlogItem = ({title , subtitle , ShpBrnd ,blogitem}) => {
   
   return (
-   <Link to='/blogpage1' className="md:pb-12 pb-5" >
+   <Link to={blogitem} className="md:pb-12 pb-5" >
      <div className='relative cursor-pointer overflow-hidden group rounded-md w-full md:w-[290px] h-[200px] my-6'>
         <Image className='w-full h-full duration-150 transition-transform group-hover:scale-105 group-hover:rotate-1' src={ShpBrnd}/>
         <Flex className="absolute bottom-[15px] rounded-md p-1 text-[12px] right-[15px] text-white bg-red flex items-center justify-center gap-1.5"><FaRegClock />2025-03-12 </Flex>

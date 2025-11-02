@@ -5,6 +5,7 @@ import Image from '../components/Image'
 import Blgimg from '../assets/blog1.png'
 import Blgimg1 from '../assets/blog2.png'
 import Blgimg2 from '../assets/blog3.png'
+import { Link } from 'react-router-dom'
 
 const BlogPage3 = () => {
   return (
@@ -19,18 +20,24 @@ New had happen unable uneasy. Drawings can followed improved out sociable not. E
             </Flex>
 
             <Flex className='flex-col gap-3.5 w-[30%]'>
+              <Link to={'/blogpage3'}>
               <Flex className='flex-row overflow-hidden items-center gap-3.5 cursor-pointer'>
                 <Image className='rounded-md !w-[30%] hover:scale-105 duration-300' src={Blgimg2}/>
                 <h3 className='font-semibold text-sm text-gray-700'>This prefabrice passive house is memorable highly sustainable</h3>
               </Flex>
+              </Link>
+              <Link to={'/blogpage1'}>
               <Flex className='flex-row items-center gap-3.5 cursor-pointer'>
                 <Image className='rounded-md !w-[30%] hover:scale-105 duration-300' src={Blgimg}/>
                 <h3 className='font-semibold text-sm text-gray-700'>sustainable living through cutting-edge prefabricated homes</h3>
               </Flex>
+              </Link>
+              <Link to={'/blogpage2'}>
               <Flex className='flex-row items-center gap-3.5 cursor-pointer'>
                 <Image className='rounded-md !w-[30%] hover:scale-105 duration-300' src={Blgimg1}/>
                 <h3 className='font-semibold text-sm text-gray-700'>Explore sustainable living through cutting-edge prefabricated homes</h3>
               </Flex>
+              </Link>
               
             </Flex>
         </Flex>
